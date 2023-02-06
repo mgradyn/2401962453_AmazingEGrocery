@@ -14,8 +14,10 @@ class CreateOrdersTable extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('order_id')->nullable(false);
+            $table->foreignId('account_id')->reference('account_id')->on('accounts')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('item_id')->reference('item_id')->on('items')->onUpdate('cascade')->onDelete('cascade');
+            $table->int('price')->nullable(false);
         });
     }
 
