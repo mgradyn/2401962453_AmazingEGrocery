@@ -17,7 +17,7 @@ class CreateOrdersTable extends Migration
             $table->increments('order_id')->nullable(false);
             $table->foreignId('account_id')->reference('account_id')->on('accounts')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('item_id')->reference('item_id')->on('items')->onUpdate('cascade')->onDelete('cascade');
-            $table->int('price')->nullable(false);
+            $table->integer('price')->nullable(false);
         });
     }
 

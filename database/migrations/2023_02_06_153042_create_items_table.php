@@ -17,7 +17,7 @@ class CreateItemsTable extends Migration
             $table->increments('item_id')->nullable(false);
             $table->string('item_name', 50)->nullable(false);
             $table->text('item_desc', 500)->nullable(false);
-            $table->int('price')->nullable(false);
+            $table->integer('price')->nullable(false);
         });
     }
 
