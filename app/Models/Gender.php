@@ -9,6 +9,8 @@ class Gender extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $table = 'genders';
 
     protected $fillable = [
