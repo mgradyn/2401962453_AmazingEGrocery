@@ -23,7 +23,8 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app"
+        style="min-height: 100vh !important; margin:0 !important; display:flex !important; flex-direction:column !important;">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm"
             style="background-color: #adead2 !important">
             <div class="container">
@@ -90,11 +91,11 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" style="flex:1 !important">
             @yield('content')
         </main>
 
-        <footer class="footer" style="position: absolute; bottom: 0; width: 100%; background-color: #adead2">
+        <footer class="footer" style="width: 100%; background-color: #adead2">
             <div class="text-center p-4">
                 © Amazing E-Grocery 2023
             </div>
