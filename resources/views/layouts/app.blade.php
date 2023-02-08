@@ -62,18 +62,23 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
-                        
+                        <li class="nav-item">
+                            <div class="btn-group btn-group-toggle me-4" data-toggle="buttons">
+                                <a href="locale/en" class="btn btn btn-light language-switch" data-language="en">EN</a>
+                                <a href="locale/id" class="btn btn btn-light language-switch" data-language="id">ID</a>
+                            </div>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item" style="background-color: #f5da55 !important">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('form.login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item" style="background-color: #f5da55">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('form.register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -81,7 +86,7 @@
                                 <a class="nav-link" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                               document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    {{ __('form.logout') }}
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf

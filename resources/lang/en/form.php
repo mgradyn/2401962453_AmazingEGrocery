@@ -17,6 +17,10 @@ return [
     "display_picture" => "Display Picture",
     "confirm_password" => "Confirm Password",
     "submit" => "Submit",
+    "logout" => "Logout",
+    "register" => "Register",
+    "login" => "Login",
+    "remember_me" => "Remember me",
 
     "save" => "Save",
 

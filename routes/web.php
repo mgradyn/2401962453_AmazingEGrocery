@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\AccountMaintenanceController;
+use App\Http\Controllers\LocalizationController;
 
 
 /*
@@ -43,5 +44,7 @@ Route::prefix('admin/')->middleware(['auth', 'isAdmin'])->group(function(){
     Route::delete('/delete-account/{account_id}', [AccountMaintenanceController::class, 'deleteAccount'])->name('delete-account');
 });
 
+// Localization
+Route::get("locale/{lange}", [LocalizationController::class, 'setLang']);
 
 

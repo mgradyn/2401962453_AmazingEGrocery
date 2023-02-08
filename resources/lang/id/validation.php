@@ -27,7 +27,7 @@ return [
     'between' => [
         'numeric' => ':attribute harus antara :min dan :max.',
         'file' => ':attribute harus antara :min dan :max kilobita.',
-        'string' => ':attribute harus antara :min dan :max characters.',
+        'string' => ':attribute harus antara :min dan :max karakter.',
         'array' => ':attribute harus memiliki antara :min dan :max item.',
     ],
     'boolean' => ':attribute harus benar atau salah.',
@@ -52,13 +52,13 @@ return [
     'gt' => [
         'numeric' => ':attribute harus lebih besar dari :value.',
         'file' => ':attribute harus lebih besar dari :value kilobytes.',
-        'string' => ':attribute harus lebih besar dari :value characters.',
+        'string' => ':attribute harus lebih besar dari :value karakter.',
         'array' => ':attribute harus memiliki lebih dari :value item.',
     ],
     'gte' => [
         'numeric' => ':attribute harus lebih besar dari atau sama dengan :value.',
         'file' => ':attribute harus lebih besar dari atau sama dengan :value kilobytes.',
-        'string' => ':attribute harus lebih besar dari atau sama dengan :value characters.',
+        'string' => ':attribute harus lebih besar dari atau sama dengan :value karakter.',
         'array' => ':attribute harus memiliki :value item atau lebih.',
     ],
     'image' => ':attribute harus merupakan gambar.',
@@ -72,20 +72,20 @@ return [
     'lt' => [
         'numeric' => ':attribute harus kurang dari :value.',
         'file' => ':attribute harus kurang dari :value kilobytes.',
-        'string' => ':attribute harus kurang dari :value characters.',
+        'string' => ':attribute harus kurang dari :value karakter.',
         'array' => ':attribute harus memiliki kurang dari :value item.',
     ],
     'lte' => [
         'numeric' => ':attribute harus kurang dari atau sama dengan :value.',
         'file' => ':attribute harus kurang dari atau sama dengan :value kilobytes.',
-        'string' => ':attribute harus kurang dari atau sama dengan :value characters.',
+        'string' => ':attribute harus kurang dari atau sama dengan :value karakter.',
         'array' => ':attribute tidak boleh memiliki lebih dari :value item.',
     ],
     'mac_address' => ':attribute harus merupakan alamat MAC yang valid.',
     'max' => [
         'numeric' => ':attribute tidak boleh lebih besar dari :max.',
         'file' => ':attribute tidak boleh lebih besar dari :max kilobytes.',
-        'string' => ':attribute tidak boleh lebih dari :max characters.',
+        'string' => ':attribute tidak boleh lebih dari :max karakter.',
         'array' => ':attribute tidak boleh memiliki lebih dari :max item.',
     ],
     'mimes' => ':attribute harus berupa file dengan tipe: :values.',
@@ -93,7 +93,7 @@ return [
     'min' => [
         'numeric' => ':attribute setidaknya harus :min.',
         'file' => ':attribute setidaknya harus :min kilobyte.',
-        'string' => ':attribute setidaknya harus :min characters.',
+        'string' => ':attribute setidaknya harus :min karakter.',
         'array' => ':attribute harus memiliki setidaknya :min item.',
     ],
     'multiple_of' => ':attribute harus kelipatan dari :value.',
@@ -119,16 +119,16 @@ return [
     'size' => [
         'numeric' => ':attribute harus :size.',
         'file' => ':attribute harus :size kilobyte.',
-        'string' => ':attribute harus :size characters.',
+        'string' => ':attribute harus :size karakter.',
         'array' => ':attribute harus memiliki :size item.',
     ],
-    'starts_with' => 'The :attribute harus dimulai dengan salah satu dari berikut.',
-    'string' => 'The :attribute harus berupa string.',
-    'timezone' => 'The :attribute harus berupa zona waktu yang valid.',
-    'unique' => 'The :attribute sudah diambil.',
-    'uploaded' => 'The :attribute gagal diunggah.',
-    'url' => 'The :attribute harus berupa URL yang valid.',
-    'uuid' => 'The :attribute harus berupa UUID yang valid.',
+    'starts_with' => ':attribute harus dimulai dengan salah satu dari berikut.',
+    'string' => ':attribute harus berupa string.',
+    'timezone' => ':attribute harus berupa zona waktu yang valid.',
+    'unique' => ':attribute sudah diambil.',
+    'uploaded' => ':attribute gagal diunggah.',
+    'url' => ':attribute harus berupa URL yang valid.',
+    'uuid' => ':attribute harus berupa UUID yang valid.',
 
     /*
     |--------------------------------------------------------------------------

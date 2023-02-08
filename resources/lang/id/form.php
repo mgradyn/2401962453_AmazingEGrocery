@@ -17,6 +17,10 @@ return [
     "display_picture" => "Foto Profil",
     "confirm_password" => "Konfirmasi Kata Sandi",
     "submit" => "Kirim",
+    "logout" => "Keluar",
+    "register" => "Daftar",
+    "login" => "Masuk",
+    "remember_me" => "Ingat saya",
 
     "save" => "Simpan",
 
