@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Account;
+use App\Models\Role;
 
 class AccountMaintenanceController extends Controller
 {
@@ -14,20 +15,14 @@ class AccountMaintenanceController extends Controller
 
     public function maintenante()
     {
-        $accounts = Account::all();
-        // $accounts = Account::where('account_id', '!=', Auth::user())->orWhereNull('account_id')->get();
-
-        foreach($accounts as $account)
-        {
-            $account['role_name'] = $account->role()->first()->role_name;
-        }
-
+        $accounts = Account::paginate(10);
         return view('admin.account-maintenance', ['accounts' => $accounts]);
     }
 
     public function updateRole($id)
     {
         $account = Account::find($id);
+        $account['role'] = $account->role()->first()->role_name;
 
         return view('admin.update-role', ['account' => $account]);
     }

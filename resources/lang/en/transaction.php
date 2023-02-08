@@ -6,5 +6,6 @@ return [
   'check_out' => 'Check Out',
   'total' => 'TOTAL',
   'detail' => 'Detail',
-  'delete' => 'Delete'
+  'delete' => 'Delete',
+  'update_role' => 'Update Role',
 ];

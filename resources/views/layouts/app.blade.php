@@ -53,7 +53,7 @@
 
                             @isAdmin
                                 <li class="nav-item" style="background-color: #f5da55 !important">
-                                    <a class="nav-link" href="{{ route('home') }}">{{ __('page.account_maintenance') }}</a>
+                                    <a class="nav-link" href="{{ route('account-maintenance') }}">{{ __('page.account_maintenance') }}</a>
                                 </li>
                             @endisAdmin
                         @endauth
