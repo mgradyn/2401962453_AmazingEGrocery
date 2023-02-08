@@ -9,6 +9,8 @@ class Gender extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'gender_id';
+
     public $timestamps = false;
 
     protected $table = 'genders';

@@ -13,6 +13,8 @@ class Item extends Model
 
     protected $table = 'items';
 
+    protected $primaryKey = 'item_id';
+
     protected $fillable = [
         'item_name',
         'item_desc',
