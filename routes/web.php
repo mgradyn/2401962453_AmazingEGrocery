@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\AccountMaintenanceController;
 
 
 /*
@@ -33,6 +34,13 @@ Route::middleware(['auth'])->group(function (){
     Route::delete('delete-from-cart/{order_id}', [CartController::class, 'destroyItem'])->name('delete-from-cart');
     Route::get('cart', [CartController::class, 'cart'])->name('cart');
     Route::delete('check-out', [CartController::class, 'checkOut'])->name('check-out');
+});
+
+Route::prefix('admin/')->middleware(['auth', 'isAdmin'])->group(function(){
+    Route::get('/account-maintenance', [AccountMaintenanceController::class, 'maintenante'])->name('account-maintenance');
+    Route::get('/update-role/{account_id}', [AccountMaintenanceController::class, 'updateRole'])->name('update-role');
+    Route::patch('/change-role/{account_id}', [AccountMaintenanceController::class, 'changeRole'])->name('change-role');
+    Route::delete('/delete-account/{account_id}', [AccountMaintenanceController::class, 'deleteAccount'])->name('delete-account');
 });
 
 

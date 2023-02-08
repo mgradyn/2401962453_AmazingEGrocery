@@ -14,29 +14,29 @@ class CartController extends Controller
         $this->middleware('auth');
     }
 
-public function cart()
-{
-    $items = Order::where('account_id', Auth::user()->account_id)->get();
-    $totalPrice = 0;
-    foreach($items as $item)
+    public function cart()
     {
-        $totalPrice = $totalPrice + $item->item()->first()->price;
+        $items = Order::where('account_id', Auth::user()->account_id)->get();
+        $totalPrice = 0;
+        foreach($items as $item)
+        {
+            $totalPrice = $totalPrice + $item->item()->first()->price;
+        }
+
+        return view('cart', ['items' => $items, 'totalPrice' => $totalPrice]); 
     }
 
-    return view('cart', ['items' => $items, 'totalPrice' => $totalPrice]); 
-}
-
-public function checkOut()
-{
-    $items = Order::where('account_id', Auth::user()->account_id)->get();
-
-    foreach($items as $item)
+    public function checkOut()
     {
-        $item->delete();
-    }
+        $items = Order::where('account_id', Auth::user()->account_id)->get();
 
-    return redirect(route('home'));
-}
+        foreach($items as $item)
+        {
+            $item->delete();
+        }
+
+        return redirect(route('home'));
+    }
 
     public function addToCart($item_id)
     {
@@ -51,12 +51,12 @@ public function checkOut()
     }
     
 public function destroyItem($order_id)
-{
-    $order = Order::find($order_id);
+    {
+        $order = Order::find($order_id);
 
-    if($order){
-        $order->delete();
+        if($order){
+            $order->delete();
+        }
+        return redirect(route('cart'));
     }
-    return redirect(route('cart'));
-}
 }
