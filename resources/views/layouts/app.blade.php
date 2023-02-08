@@ -45,7 +45,7 @@
                                 <a class="nav-link" href="{{ route('home') }}">{{ __('page.home') }}</a>
                             </li>
                             <li class="nav-item" style="background-color: #f5da55 !important">
-                                <a class="nav-link" href="{{ route('home') }}">{{ __('page.cart') }}</a>
+                                <a class="nav-link" href="{{ route('cart') }}">{{ __('page.cart') }}</a>
                             </li>
                             <li class="nav-item" style="background-color: #f5da55 !important">
                                 <a class="nav-link" href="{{ route('profile') }}">{{ __('page.profile') }}</a>
@@ -91,7 +91,7 @@
             </div>
         </nav>
 
-        <main class="py-4" style="flex:1 !important">
+        <main class="py-4 d-flex" style="flex:1 !important">
             @yield('content')
         </main>
 

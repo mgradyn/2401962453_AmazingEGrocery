@@ -13,11 +13,11 @@
                             <div class="card-body">
                                 <h3 class="card-title">{{ $item->item_name }}</h3>
                                 <div class="row mt-4">
-                                    <div class="col-md-3" scope="row">{{ __('Detail') }}</div>
+                                    <div class="col-md-3" scope="row">{{ __('transaction.detail') }}</div>
                                     <div class="col">{{ $item->item_desc }}</div>
                                 </div>
                                 <div class="row mt-3">
-                                    <div class="col-md-3" scope="row">{{ __('Price') }}</div>
+                                    <div class="col-md-3" scope="row">{{ __('transaction.price') }}</div>
                                     <div class="col">{{ 'Rp. ' . ' ' . $item->price }}</div>
                                 </div>
                                 <div class="row">

@@ -26,7 +26,7 @@ class Order extends Model
         return $this->belongsTo(Account::class, 'account_id', 'account_id');
     }
 
-    public function items()
+    public function item()
     {
         return $this->belongsTo(Item::class, 'item_id', 'item_id');
     }

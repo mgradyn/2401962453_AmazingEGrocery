@@ -30,7 +30,9 @@ Route::middleware(['auth'])->group(function (){
     Route::patch('/update-profile/{id}', [ProfileController::class, 'update'])->name('update-profile');
 
     Route::post('add-to-cart/{item_id}', [CartController::class, 'addToCart'])->name('add-to-cart');
-    Route::delete('delete-from-cart/{item_id}', [CartController::class, 'destroyItem'])->name('delete-from-cart');
+    Route::delete('delete-from-cart/{order_id}', [CartController::class, 'destroyItem'])->name('delete-from-cart');
+    Route::get('cart', [CartController::class, 'cart'])->name('cart');
+    Route::delete('check-out', [CartController::class, 'checkOut'])->name('check-out');
 });
 
 
