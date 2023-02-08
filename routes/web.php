@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CartController;
 
 
 /*
@@ -25,7 +26,11 @@ Auth::routes();
 Route::middleware(['auth'])->group(function (){
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
+    Route::get('item/{item_id}', [HomeController::class, 'view'])->name('detail-item');
     Route::patch('/update-profile/{id}', [ProfileController::class, 'update'])->name('update-profile');
+
+    Route::post('add-to-cart/{item_id}', [CartController::class, 'addToCart'])->name('add-to-cart');
+    Route::delete('delete-from-cart/{item_id}', [CartController::class, 'destroyItem'])->name('delete-from-cart');
 });
 
 

@@ -25,7 +25,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $items = Item::paginate(10);;
-        return view('home', ['items' => $items]);
+        $items = Item::paginate(10);
+        return view('home.home', ['items' => $items]);
+    }
+
+    public function view($item_id)
+    {
+        $item = Item::find($item_id);
+        if ($item) {
+            return view('home.detail_item', ['item' => $item]);
+        }
+        return redirect(route('home'));  
     }
 }
