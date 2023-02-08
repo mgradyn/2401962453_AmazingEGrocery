@@ -39,7 +39,23 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
+                        @auth
+                            <li class="nav-item" style="background-color: #f5da55 !important">
+                                <a class="nav-link" href="{{ route('home') }}">{{ __('page.home') }}</a>
+                            </li>
+                            <li class="nav-item" style="background-color: #f5da55 !important">
+                                <a class="nav-link" href="{{ route('home') }}">{{ __('page.cart') }}</a>
+                            </li>
+                            <li class="nav-item" style="background-color: #f5da55 !important">
+                                <a class="nav-link" href="{{ route('profile') }}">{{ __('page.profile') }}</a>
+                            </li>
 
+                            @isAdmin
+                                <li class="nav-item" style="background-color: #f5da55 !important">
+                                    <a class="nav-link" href="{{ route('home') }}">{{ __('page.account_maintenance') }}</a>
+                                </li>
+                            @endisAdmin
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->

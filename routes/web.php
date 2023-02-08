@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +23,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::middleware(['auth'])->group(function (){
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
+    Route::patch('/update-profile/{id}', [ProfileController::class, 'update'])->name('update-profile');
 });
 
 

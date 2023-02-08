@@ -18,6 +18,8 @@ return [
     "confirm_password" => "Confirm Password",
     "submit" => "Submit",
 
+    "save" => "Save",
+
     "already_account" => "Already have an account? click here to login
     Here",
     'no_account' => "Don't have an account? click here to sign up",
