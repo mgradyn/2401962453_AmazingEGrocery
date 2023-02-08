@@ -35,7 +35,7 @@ class CartController extends Controller
             $item->delete();
         }
 
-        return redirect(route('home'));
+        return view('index', ['title' => 'index.success', 'message' => 'index.two_four', 'link' => 'index.go_home']); 
     }
 
     public function addToCart($item_id)

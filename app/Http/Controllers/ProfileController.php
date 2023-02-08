@@ -78,7 +78,8 @@ class ProfileController extends Controller
 
         $account->update();
 
-        return redirect(route('home'))->with('status-success', "Saved");
+
+        return view('index', ['title' => 'index.saved', 'link' => 'index.go_home']); 
     }
 
 }
