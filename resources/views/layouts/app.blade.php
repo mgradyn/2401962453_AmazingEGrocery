@@ -28,8 +28,8 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm"
             style="background-color: #adead2 !important">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand fw-bold" href="{{ url('/') }}">
+                    {{ 'Amazing E-Grocery' }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -53,7 +53,8 @@
 
                             @isAdmin
                                 <li class="nav-item" style="background-color: #f5da55 !important">
-                                    <a class="nav-link" href="{{ route('account-maintenance') }}">{{ __('page.account_maintenance') }}</a>
+                                    <a class="nav-link"
+                                        href="{{ route('account-maintenance') }}">{{ __('page.account_maintenance') }}</a>
                                 </li>
                             @endisAdmin
                         @endauth
@@ -61,6 +62,7 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
+                        
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))

@@ -13,9 +13,17 @@ class AccountMaintenanceController extends Controller
         $this->middleware(['auth','isAdmin']);
     }
 
-    public function maintenante()
+    public function maintenance()
     {
         $accounts = Account::paginate(10);
+
+        // $accounts = Account::where('account_id', '!=', Auth::user())->orWhereNull('account_id')->get();
+
+        // foreach($accounts as $account)
+        // {
+        //     $account['role_name'] = $account->role()->first()->role_name;
+        // }
+
         return view('admin.account-maintenance', ['accounts' => $accounts]);
     }
 

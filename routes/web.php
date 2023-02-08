@@ -37,7 +37,7 @@ Route::middleware(['auth'])->group(function (){
 });
 
 Route::prefix('admin/')->middleware(['auth', 'isAdmin'])->group(function(){
-    Route::get('/account-maintenance', [AccountMaintenanceController::class, 'maintenante'])->name('account-maintenance');
+    Route::get('/account-maintenance', [AccountMaintenanceController::class, 'maintenance'])->name('account-maintenance');
     Route::get('/update-role/{account_id}', [AccountMaintenanceController::class, 'updateRole'])->name('update-role');
     Route::patch('/change-role/{account_id}', [AccountMaintenanceController::class, 'changeRole'])->name('change-role');
     Route::delete('/delete-account/{account_id}', [AccountMaintenanceController::class, 'deleteAccount'])->name('delete-account');
