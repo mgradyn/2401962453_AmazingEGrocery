@@ -64,8 +64,10 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <div class="btn-group btn-group-toggle me-4" data-toggle="buttons">
-                                <a href="locale/en" class="btn btn btn-light language-switch" data-language="en">EN</a>
-                                <a href="locale/id" class="btn btn btn-light language-switch" data-language="id">ID</a>
+                                <a href="{{ route('change-locale', ['lange' => 'en']) }}"
+                                    class="btn btn btn-light language-switch" data-language="en">EN</a>
+                                <a href="{{ route('change-locale', ['lange' => 'id']) }}"
+                                    class="btn btn btn-light language-switch" data-language="id">ID</a>
                             </div>
                         </li>
                         <!-- Authentication Links -->

@@ -45,6 +45,7 @@ Route::prefix('admin/')->middleware(['auth', 'isAdmin'])->group(function(){
 });
 
 // Localization
-Route::get("locale/{lange}", [LocalizationController::class, 'setLang']);
+Route::get("/locale/{lange}", [LocalizationController::class, 'setLang'])->name('change-locale');
+
 
 
